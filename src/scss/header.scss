@@ -1,9 +1,56 @@
 //====================================================================================================
 
+@import "/src/scss/blocks/nav";
+@import "/src/scss/blocks/login";
+
+//====================================================================================================
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $bodyColor;
+	
+	z-index: 50;
+	// .header__container
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+
+	// .header__logo
+
+	&__logo {
+	}
+
+	// .header__nav
+
+	&__nav {
+		flex: 1 1 auto;
+	}
+
+	// .header__login
+
+	&__login {
+	}
+}
+.logo {
+}
+
+
+
+
+
+
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
@@ -48,4 +95,4 @@
 		}
 	}
 }
-*/
+

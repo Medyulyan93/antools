@@ -1,4 +1,9 @@
 // Импорт функционала ==============================================================================================================================================================================================================================================================================================================================
-// import { isMobile } from "./functions.js";
-// import { formsModules } from "./forms/forms.js";
+ //import { isMobile } from "./functions.js";
+ // import { formsModules } from "./forms/forms.js";
 
+//  if (isMobile.any()) {
+//    document.body.classList.add("_touch");
+//  } else {
+//    document.body.classList.add("_pc");
+//  }

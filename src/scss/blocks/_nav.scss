@@ -1,0 +1,71 @@
+.nav {
+  // .nav__list
+
+  &__list {
+    
+    @media (min-width: $tablet) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 15px;
+      @include adaptiveValue("column-gap", 47, 15);
+    }
+  }
+
+  // .nav__item
+
+  &__item {
+  }
+
+  // .nav__item_sublist
+  &__item_sublist {
+    position: relative;
+    
+    & > a::after{
+      content: '';
+      
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: 4px;
+      background: url('@img/icons/arrow.svg') center no-repeat;
+    }
+    
+    &:hover > .nav__sublist{
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+  }
+
+  // .nav__link
+
+  &__link {
+    color: $linkColor;
+    font-size: 16px;
+    line-height: math.div(24 , 16);
+    transition: all 0.3s linear 0s;
+    &:hover{
+      text-decoration: underline;
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  // .nav__sublist
+
+  &__sublist {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    min-height: 200px;
+    z-index: 10;
+
+    @media (min-width: $tablet) {
+			opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+		}
+  }
+}
