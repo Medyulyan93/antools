@@ -1,0 +1,48 @@
+.popular-tools {
+  @include adaptiveValue("padding-bottom", 170, 24);
+  // .popular-tools__container
+
+  &__container {
+    text-align: center;
+  }
+
+  // .popular-tools__title
+
+  &__title {
+    
+    @include adaptiveValue("margin-bottom", 25, 10);
+    
+  }
+
+  // .popular-tools__sub-title
+
+  &__sub-title {
+    max-width: 430px;
+    margin: 0 auto;
+    
+    @include adaptiveValue("margin-bottom", 90, 15);
+  }
+
+  // .popular-tools__card
+
+  &__card {
+    @include adaptiveValue("margin-bottom", 100, 20);
+  }
+
+  &__btn {
+    display: inline-block;
+    margin: 0 auto;
+    color: #ff6e30;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: math.div(30, 20);
+    padding: 17px 38px;
+    transition: all 0.3s linear 0s;
+    border-radius: 8px;
+    &:hover{
+      background-color: $btnColor;
+      color: white;
+    }
+  }
+}
+

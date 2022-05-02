@@ -46,21 +46,20 @@
 
 
 
-
 //====================================================================================================
 
 //Burger
 
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		display: block;
 		position: relative;
 		width: 30px;
 		height: 18px;
 		cursor: pointer;
 		z-index: 5;
-		span,
+		span,	
 		&::before,
 		&::after {
 			content: "";
@@ -69,7 +68,7 @@
 			position: absolute;
 			width: 100%;
 			height: 2px;
-			background-color: #000;
+			background-color: white;
 		}
 		&::before {
 			top: 0px;

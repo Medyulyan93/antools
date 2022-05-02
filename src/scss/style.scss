@@ -25,12 +25,11 @@ $linkColor: rgba(255, 255, 255, 0.55); // Цвет link по умолчанию
 $btnHoverTextColor: rgba(253, 245, 255, 1); // Цвет текста кнопок в hover по умолчанию
 $btnTextColor: rgba(255, 255, 255, 0.78); // Цвет текста кнопок по умолчанию
 $placeholderTextColor: rgba(255, 255, 255, 0.38); // Цвет placeholder input по умолчанию
-$subTitleColor: rgba(255, 165, 55, 0.55); // Цвет sub-title по умолчанию
-$subTitleHoverColor: rgba(255, 165, 55, 1); // Цвет sub-title при hover по умолчанию
-$cardTitleColor: rgba(255, 255, 255, 0.78); // Цвет заголовка карточки по умолчанию
+$cardSubTitleColor: rgba(255, 165, 55, 1); // Цвет sub-title при hover по умолчанию
 $cardTitleColor: rgba(255, 255, 255, 0.9); // Цвет заголовка карточки при hover по умолчанию
-$cardTextColor: rgba(255, 255, 255, 0.55); // Цвет текста карточки по умолчанию
+$TextColor: rgba(255, 255, 255, 0.55); // Цвет текста и карточки по умолчанию
 $cardTextHoverColor: rgba(255, 255, 255, 0.78); // Цвет текста карточки при hover по умолчанию
+$btnColor: #FF6E30; // Цвет кнопки
 
 // НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
 // Минимальная ширина страницы
@@ -61,8 +60,9 @@ $mobileSmall: em(479.98); // Телефоны S
 @import "base/null";
 
 body {
+	background-color: $bodyColor;
 	// Скролл заблокирован
-	& ._lock  {
+	._lock & {
 		overflow: hidden;
 		touch-action: none;
 	}
@@ -152,6 +152,11 @@ body {
 
 // Подключение стилей отдельных блоков
 @import "header";
+@import "/src/scss/blocks/jumbotron";
+@import "/src/scss/blocks/popular-tools";
+@import "/src/scss/blocks/brands";
+@import "/src/scss/blocks/newcomer";
+@import "/src/scss/blocks/join";
 @import "footer";
 
 // Подключение стилей отдельных страниц

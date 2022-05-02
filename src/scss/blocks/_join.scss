@@ -1,0 +1,44 @@
+.join {
+
+  // .join__container
+
+  &__container {
+    @include adaptiveValue("padding-bottom", 170, 20);
+    margin: 0 auto;
+    max-width: 553px;
+    text-align: center;
+  }
+
+  // .join__title
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  // .join__sub-title
+
+  &__sub-title {
+    @include adaptiveValue("margin-bottom", 100, 25);
+  }
+
+  // .join__form
+
+  &__form {
+    & > button {
+      margin: 0 auto;
+    }
+  }
+}
+
+.search-form {
+
+  // .search-form__input
+
+  &__input {
+  }
+
+  // .search-form__button
+
+  &__button {
+  }
+}

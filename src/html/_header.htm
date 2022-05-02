@@ -1,28 +1,30 @@
 <header class="header">
 	<div class="header__container">
-		<a href="" class="header__logo logo"><img src="@img/logo/logo.svg" width="139px" height="39px" alt="logo" /></a>
-		<nav class="header__nav nav">
-			<ul class="nav__list">
+		<a href="" class="header__logo logo"><img src="@img/logo/logo.svg"
+				width="139px" height="39px" alt="logo" /></a>
+		<div class="header__menu menu">
+			<nav class="header__nav nav">
+				<ul class="nav__list">
 
-				<li class="nav__item"><a class="nav__link" href="">Home</a></li>
-				<li class="nav__item nav__item_sublist"><a class="nav__link" href="">Categories</a>
-				
-					<ul class="nav__sublist">
-						<li class="nav__item"><a class="nav__link" href="">Categories 1</a></li>
-						<li class="nav__item"><a class="nav__link" href="">Categories 2</a></li>
-						<li class="nav__item"><a class="nav__link" href="">Categories 3</a></li>
-					</ul>
+					<li class="nav__item"><a class="nav__link" href="">Home</a></li>
+					<li class="nav__item nav__item_sublist"><a class="nav__link nav__link_sublist" href="#">Categories</a>
+						<ul class="nav__sublist">
+							<li class="nav__item"><a class="nav__link" href="">Categories 1</a></li>
+							<li class="nav__item"><a class="nav__link" href="">Categories 2</a></li>
+							<li class="nav__item"><a class="nav__link" href="">Categories 3</a></li>
+						</ul>
 
-				</li>
-				<li class="nav__item"><a class="nav__link" href="">My Collections</a></li>
-				<li class="nav__item"><a class="nav__link" href="">Blog</a></li>
+					</li>
+					<li class="nav__item"><a class="nav__link" href="">My Collections</a></li>
+					<li class="nav__item"><a class="nav__link" href="">Blog</a></li>
 
-			</ul>
-		</nav>
+				</ul>
+			</nav>
+		</div>
 		<div class="header__login login">
 			<button class="login__btn">Login</button>
 			<button class="login__btn">Sign Up</button>
 		</div>
-		
+		<button type="button" class="menu__icon icon-menu"><span></span></button>
 	</div>
 </header>

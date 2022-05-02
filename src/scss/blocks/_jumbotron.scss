@@ -1,0 +1,109 @@
+.jumbotron {
+  background: $bodyColor url("@img/background/background-offer.png") right center / auto no-repeat;
+  
+  // .jumbotron__container
+
+  &__container {
+    
+    @include adaptiveValue("padding-top", 200, 100);
+    @include adaptiveValue("padding-bottom", 170, 20);
+  }
+
+  // .jumbotron__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    @media (max-width: $tablet) {
+      width: 80%;
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  // .jumbotron__title
+
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 500;
+    @include adaptiveValue("font-size", 50, 36);
+    line-height: 140%;
+    color: $titleColor;
+  }
+
+  // .jumbotron__subtitle
+
+  &__subtitle {
+    @include adaptiveValue("margin-bottom", 60, 20);
+    color: $TextColor;
+  }
+
+  // .jumbotron__form
+
+  &__form {
+    @include adaptiveValue("margin-bottom", 110, 30);
+    width: 93%;
+  }
+}
+.search-form {
+  // .search-form__input
+  position: relative;
+  padding-right: 11px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    border: 1px #837a93 solid;
+    border-radius: 10px;
+    background-color: #283036;
+  }
+  @media (max-width: $tablet) {
+    flex-wrap: wrap;
+    row-gap: 15px;
+  }
+
+  &__input {
+    padding-left: 55px;
+    flex: 1 1 auto;
+    min-height: 64px;
+    color: $TextColor;
+    outline: none;
+    background: url("@img/icons/search.svg") 12px center / auto auto no-repeat;
+    // width: 100%;
+    background-color: #283036;
+    border-radius: 10px;
+    text-align: start;
+    @media (max-width: $tablet) {
+      border: 1px #837a93 solid;
+      width: 100%;
+    }
+    &::placeholder {
+      @include adaptiveValue("font-size", 18, 14);
+    }
+  }
+
+  // .search-form__button
+
+  &__button {
+    background-color: $btnColor;
+    color: $btnHoverTextColor;
+
+    padding: 12px 36px;
+    border-radius: 8px;
+
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
+}
+.social {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px 15px;
+}

@@ -1,0 +1,45 @@
+.brands {
+  
+  // .brands__container
+
+  &__container {
+    background: #2c353d2f url('@img/background/brands/background.png') 0 0 / auto auto no-repeat;
+    border-radius: 25px;
+    @include adaptiveValue("padding-top", 55, 15);
+    @include adaptiveValue("padding-bottom", 55, 15);
+    @include adaptiveValue("padding-left", 83, 15);
+    @include adaptiveValue("padding-right", 83, 15);
+    @include adaptiveValue("margin-bottom", 200, 40);
+  }
+
+  // .brands__title
+
+  &__title {
+    
+    text-align: center;
+    color: #FFFFFFCC;
+    font-weight: 500;
+    
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: math.div(36 , 24);
+    @include adaptiveValue("margin-bottom", 55, 15);
+  }
+
+  // .brands__card
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    row-gap: 25px;
+    
+    @include adaptiveValue("column-gap", 70, 30);
+
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+    }
+
+  }
+}

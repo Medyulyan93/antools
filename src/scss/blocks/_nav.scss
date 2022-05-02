@@ -2,7 +2,9 @@
   // .nav__list
 
   &__list {
-    
+    display: none;
+    .menu-open & {
+    }
     @media (min-width: $tablet) {
       display: flex;
       justify-content: center;
@@ -21,18 +23,18 @@
   // .nav__item_sublist
   &__item_sublist {
     position: relative;
-    
-    & > a::after{
-      content: '';
-      
+
+    .touch & > a::after {
+      content: "";
+
       width: 18px;
       height: 18px;
       position: absolute;
       top: 4px;
-      background: url('@img/icons/arrow.svg') center no-repeat;
+      background: url("@img/icons/arrow.svg") center no-repeat;
     }
-    
-    &:hover > .nav__sublist{
+
+    &:hover > .nav__sublist {
       opacity: 1;
       visibility: visible;
       pointer-events: all;
@@ -44,28 +46,40 @@
   &__link {
     color: $linkColor;
     font-size: 16px;
-    line-height: math.div(24 , 16);
+    line-height: math.div(24, 16);
     transition: all 0.3s linear 0s;
-    &:hover{
+    &:hover {
       text-decoration: underline;
       color: rgba(255, 255, 255, 0.9);
     }
   }
 
+  // .nav__link_sublist
+  &__link_sublist{
+    
+  }
+
+
   // .nav__sublist
 
   &__sublist {
+    display: none;
     position: absolute;
     top: 100%;
     right: 0;
     width: 100%;
     min-height: 200px;
     z-index: 10;
-
+    
+    ._active & {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
     @media (min-width: $tablet) {
-			opacity: 0;
+      opacity: 0;
       visibility: hidden;
       pointer-events: none;
-		}
+    }
   }
 }

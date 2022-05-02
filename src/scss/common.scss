@@ -1,1 +1,136 @@
 // Заголовки, общие БЄМ блоки и проче...
+.h2-title {
+  color: $titleColor;
+  font-weight: 500;
+  @include adaptiveValue("font-size", 48, 32);
+  line-height: 130%;
+}
+.sub-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: math.div(30, 18);
+  color: $TextColor;
+}
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 24px;
+  @include adaptiveValue("row-gap", 120, 20);
+
+  // .card__body
+
+  &__body {
+    padding: 33px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    opacity: 0.7;
+    flex: 0 1 392px;
+    border-radius: 15px;
+    background: $bodyColor url("@img/background/tools/background-card.png") 200px 0px / auto auto no-repeat;
+    transition: all 0.3s linear 0s;
+
+    &:hover {
+      opacity: 1;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      transform: translateY(-19px);
+      background: #283036a6 url("@img/background/tools/background-card.png") 0 0 / auto auto no-repeat;
+      backdrop-filter: blur(50px);
+    }
+        // .card__body_min
+
+        &_min {
+          flex: 0 0 288px;
+          padding: 25px;
+        }
+  }
+
+  // .card__header
+
+  &__header {
+  }
+
+  // .card__content
+
+  &__content {
+    text-align: start;
+    font-size: 16px;
+    line-height: math.div(30, 16);
+  }
+
+  // .card__footer
+
+  &__footer {
+  }
+}
+.header-card {
+  // .header-card__image
+  display: flex;
+  column-gap: 30px;
+  &__image {
+  }
+  // .header-card__name
+  &__name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  // .header-card__title
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: math.div(36, 24);
+    color: $cardTitleColor;
+    margin-bottom: 3px;
+  }
+
+  // .header-card__subtitle
+
+  &__subtitle {
+    color: $cardSubTitleColor;
+  }
+}
+.footer-card {
+  display: flex;
+  justify-content: space-between;
+  // .footer-card__btn
+
+  &__btn {
+    & > :not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  // .footer-card__like
+
+  &__like {
+  }
+
+  // .footer-card__folder
+
+  &__folder {
+  }
+
+  // .footer-card__link
+
+  &__link {
+    display: inline-block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: math.div(24, 16);
+    padding: 9px 35px;
+    border-radius: 8px;
+    transition: all 0.3s linear 0s;
+    color: white;
+    &:hover {
+      background-color: $btnColor;
+    }
+  }
+}
+
+
+
