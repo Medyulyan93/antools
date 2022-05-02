@@ -2,9 +2,35 @@
   // .nav__list
 
   &__list {
-    display: none;
-    .menu-open & {
+    transition: all 0.3s ease-in-out 0s;
+    .touch & {
+      position: absolute;
+      right: -100%;
+      transition: all 0.3s linear 0s;
     }
+
+    .menu-open & {
+      display: inherit;
+      transition: all 0.3s linear 0s;
+      position: fixed;
+      top: 0;
+      right: 0%;
+      width: 100%;
+      height: 100%;
+      margin-right: 10px;
+      & > li:not(:last-child) {
+        padding-bottom: 15px;
+      }
+      & > li > a {
+        font-size: 32px;
+        color: rgb(192, 186, 186);
+      }
+
+      background-color: rgba(15, 18, 20, 0.9);
+      text-align: right;
+      padding: 100px 30px 100px 30px;
+    }
+
     @media (min-width: $tablet) {
       display: flex;
       justify-content: center;
@@ -26,18 +52,20 @@
 
     .touch & > a::after {
       content: "";
-
       width: 18px;
       height: 18px;
+      margin-left: 5px;
       position: absolute;
-      top: 4px;
-      background: url("@img/icons/arrow.svg") center no-repeat;
+      top: 15px;
+      background: url("@img/icons/arrow.svg") center / cover no-repeat;
     }
-
-    &:hover > .nav__sublist {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: all;
+    @media (min-width: $tablet) {
+      &:hover > .nav__sublist {
+        display: inherit;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
     }
   }
 
@@ -55,27 +83,38 @@
   }
 
   // .nav__link_sublist
-  &__link_sublist{
-    
+  &__link_sublist {
+    &._active + .nav__sublist {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+      position: relative;
+      
+      min-height: 100px;
+    }
   }
-
 
   // .nav__sublist
 
   &__sublist {
-    display: none;
+    & > li > a{
+      font-size: 24px;
+      
+    }
+    & > li{
+      padding-bottom: 10px;
+      
+    }
+    
     position: absolute;
+    list-style: none;
     top: 100%;
     right: 0;
     width: 100%;
     min-height: 200px;
     z-index: 10;
-    
-    ._active & {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: all;
-    }
+    display: none;
     @media (min-width: $tablet) {
       opacity: 0;
       visibility: hidden;

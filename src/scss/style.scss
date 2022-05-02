@@ -62,7 +62,7 @@ $mobileSmall: em(479.98); // Телефоны S
 body {
 	background-color: $bodyColor;
 	// Скролл заблокирован
-	._lock & {
+	.lock & {
 		overflow: hidden;
 		touch-action: none;
 	}

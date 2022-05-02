@@ -1,7 +1,39 @@
 .login {
-
+	transition: all 0.3s linear 0s;
 	// .login__btn
-
+	@media (max-width: $mobile) {
+		display: none;
+	}
+	.menu-open & {
+		transition: all 0.3s linear 0s;
+		display: block;
+		position: fixed;
+		top: 80%;
+		left: 10%;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+	}
 	&__btn {
+		transition: all 0.3s linear 0s;
+		padding: 12px 36px;
+		border-radius: 8px;
+
+		@media (min-width: $tablet) {
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+			&:hover {
+				background-color: $btnColor;
+				color: white;
+			}
+		}
+		.touch & {
+			background-color: $btnColor;
+			color: white;
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
 	}
 }

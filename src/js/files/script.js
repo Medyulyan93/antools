@@ -17,5 +17,13 @@ import { isMobile } from "./functions.js";
 //   }
 // }
 
+const navLinkSublists = document.querySelectorAll(".nav__link_sublist");
+navLinkSublists.forEach((navLinkSublist) => {
+  navLinkSublist.addEventListener("click", function (e) {
+    navLinkSublist.classList.toggle("_active");
+    e.preventDefault();
+  });
+});
+
 
 
